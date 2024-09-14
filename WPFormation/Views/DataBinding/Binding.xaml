@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="WPFormation.Views.DataBinding.Binding"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFormation.Views.DataBinding"
+             mc:Ignorable="d" 
+             Height="250" d:DesignWidth="300">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtInput" VerticalContentAlignment="Center"
+             Text="{Binding BoundText, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Width="250" Height="40"/>
+        <Button Grid.Row="1" x:Name="btnSet" Content="Set" Width="100" Height="40"
+                Click="btnSet_Click"/>
+        <TextBlock Grid.Row="2" x:Name="tbPlaceHolder" Text="{Binding BoundText}" FontSize="16"
+            VerticalAlignment="Center" HorizontalAlignment="Center" />
+    </Grid>
+</UserControl>
