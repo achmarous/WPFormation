@@ -6,10 +6,9 @@
         xmlns:local="clr-namespace:WPFormation"
         xmlns:Forms="clr-namespace:WPFormation.Views.Forms"
         xmlns:DataBiniding="clr-namespace:WPFormation.Views.DataBinding"
+        xmlns:BoxMessage="clr-namespace:WPFormation.Views.BoxMessage"
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="300">
 
-    <Grid>
-        <DataBiniding:Binding />
-    </Grid>
+    <BoxMessage:BoxMessage />
 </Window>
